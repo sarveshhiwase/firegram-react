@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProgressBar from "./ProgressBar";
 
-const UploadForm = ({uid}) => {
+const UploadForm = ({ uid }) => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
 
@@ -32,7 +32,7 @@ const UploadForm = ({uid}) => {
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <div>{file.name}</div>}
-        {file && < ProgressBar uid={uid} file={file} setFile={setFile} />}
+        {file && <ProgressBar uid={uid} file={file} setFile={setFile} />}
       </div>
     </form>
   );

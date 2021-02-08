@@ -9,7 +9,7 @@
 /* base styles & title */
 body {
   font-family: "Noto Serif";
-  background: #E0E0E0;
+  background: #e0e0e0;
   /*background: linear-gradient(to right, #141e30, #243b55);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: var(--secondary);
 }
@@ -21,9 +21,9 @@ body {
   width: 40%;
   height: 40%;
 }
-.home-icon{
+.home-icon {
   max-width: 100%;
-  height: 30%;
+  height: 15%;
 }
 .title h1 {
   color: var(--primary);
@@ -137,281 +137,63 @@ label:hover {
   }
 }
 
-.flex{
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.profile-icon{
+.profile-icon {
   border-radius: 50%;
   width: 50px;
   height: 50px;
   margin: auto;
 }
 
-.flex-center{
-  margin-top: 45px; 
+.flex-center {
+  margin-top: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.signInDiv2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-}
-.signInDiv2 a {
-  /*width: 100%;*/
-  width: 240px;
-  height: 54px;
-  padding: 8px;
-  font-size: 0.8rem;
-  font-weight: 900;
-  color: #ff4655;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  box-shadow: 0 0 0 1px inset rgba(236, 232, 225, 0.3);
-  position: relative;
-  margin: 10px 0;
-}
-.signInDiv2 a.white:hover > p {
-  color: #ece8e1;
-}
-.signInDiv2 a.white > p {
-  background: #ece8e1;
-  color: #0f1923;
-}
-.signInDiv2 a.white > p span.base {
-  border: 1px solid transparent;
-}
-.signInDiv2 a.transparent:hover > p {
-  color: #ece8e1;
-}
-.signInDiv2 a.transparent:hover > p span.text {
-  box-shadow: 0 0 0 1px #ece8e1;
-}
-.signInDiv2 a.transparent > p {
-  background: #0f1923;
-  color: #ece8e1;
-}
-.signInDiv2 a.transparent > p span.base {
-  border: 1px solid #ece8e1;
-}
-.signInDiv2 a:after, .signInDiv a:before {
-  content: "";
-  width: 1px;
-  position: absolute;
-  height: 8px;
-  background: #0f1923;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.signInDiv2 a:before {
-  right: 0;
-  left: initial;
-}
-.signInDiv2 a p {
-  margin: 0;
-  height: 54px;
-  line-height: 54px;
-  box-sizing: border-box;
-  z-index: 1;
-  left: 0;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.signInDiv2 a p span.base {
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  border: 1px solid #ff4655;
-}
-.signInDiv2 a p span.base:before {
-  content: "";
-  width: 2px;
-  height: 2px;
-  left: -1px;
-  top: -1px;
-  background: #0f1923;
-  position: absolute;
-  transition: 0.3s ease-out all;
-}
-.signInDiv2 a p span.bg {
-  left: -5%;
-  position: absolute;
-  background: #ff4655;
-  width: 0;
-  height: 100%;
-  z-index: 3;
-  transition: 0.3s ease-out all;
-  transform: skewX(-10deg);
-}
-.signInDiv2 a p span.text {
-  z-index: 4;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.signInDiv2 a p span.text:after {
-  content: "";
-  width: 4px;
-  height: 4px;
-  right: 0;
-  bottom: 0;
-  background: #0f1923;
-  position: absolute;
-  transition: 0.3s ease-out all;
-  z-index: 5;
-}
-.signInDiv2 a:hover {
-  color: #ece8e1;
-  cursor: pointer;
-}
-.signInDiv2 a:hover span.bg {
-  width: 110%;
-}
-.signInDiv2 a:hover span.text:after {
-  background: #ece8e1;
 }
 
 .signInDiv {
-  width: 100%;
   display: flex;
-  height: 100vh;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-flow: column;
 }
-.signInDiv a {
-  width: 100%;
-  max-width: 240px;
-  height: 54px;
-  padding: 8px;
-  font-size: 0.8rem;
-  font-weight: 900;
-  color: #ff4655;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  box-shadow: 0 0 0 1px inset rgba(236, 232, 225, 0.3);
-  position: relative;
-  margin: 10px 0;
+.signinbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 10px;
+  background: #4285f4;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
 }
-.signInDiv a.white:hover > p {
-  color: #ece8e1;
+
+.signoutbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: tomato;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
 }
-.signInDiv a.white > p {
-  background: #ece8e1;
-  color: #0f1923;
-}
-.signInDiv a.white > p span.base {
-  border: 1px solid transparent;
-}
-.signInDiv a.transparent:hover > p {
-  color: #ece8e1;
-}
-.signInDiv a.transparent:hover > p span.text {
-  box-shadow: 0 0 0 1px #ece8e1;
-}
-.signInDiv a.transparent > p {
-  background: #0f1923;
-  color: #ece8e1;
-}
-.signInDiv a.transparent > p span.base {
-  border: 1px solid #ece8e1;
-}
-.signInDiv a:after, signInDiv a:before {
-  content: "";
-  width: 1px;
-  position: absolute;
-  height: 8px;
-  background: #0f1923;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.signInDiv a:before {
-  right: 0;
-  left: initial;
-}
-.signInDiv a p {
-  margin: 0;
-  height: 54px;
-  line-height: 54px;
-  box-sizing: border-box;
-  z-index: 1;
-  left: 0;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.signInDiv a p span.base {
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  border: 1px solid #ff4655;
-}
-.signInDiv a p span.base:before {
-  content: "";
-  width: 2px;
-  height: 2px;
-  left: -1px;
-  top: -1px;
-  background: #0f1923;
-  position: absolute;
-  transition: 0.3s ease-out all;
-}
-.signInDiv a p span.bg {
-  left: -5%;
-  position: absolute;
-  background: #ff4655;
-  width: 0;
-  height: 100%;
-  z-index: 3;
-  transition: 0.3s ease-out all;
-  transform: skewX(-10deg);
-}
-.signInDiv a p span.text {
-  z-index: 4;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.signInDiv a p span.text:after {
-  content: "";
-  width: 4px;
-  height: 4px;
-  right: 0;
-  bottom: 0;
-  background: #0f1923;
-  position: absolute;
-  transition: 0.3s ease-out all;
-  z-index: 5;
-}
-.signInDiv a:hover {
-  color: #ece8e1;
-  cursor: pointer;
-  
-}
-.signInDiv a:hover span.bg {
-  width: 110%;
-}
-.signInDiv a:hover span.text:after {
-  background: #ece8e1;
+
+.google-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
