@@ -12,7 +12,7 @@ const signIn = ({auth,provider}) => {
 <div className="signInDiv">
 <img className="home-icon" src={logo} alt="" />
 
-<a onClick={signInWithGoogle}>
+<a href="firegram" onClick={signInWithGoogle}>
     <p><span className="bg"></span><span className="base"></span><span className="text">Sign In with Google</span></p></a></div>
  </>
   )
