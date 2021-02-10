@@ -6,16 +6,19 @@ import Modal from "./comps/Modal";
 import SignIn from "./comps/signIn";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { projectAuth, provider } from "./firebase/config";
+import LinearProgress from '@material-ui/core/LinearProgress'
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   const [user] = useAuthState(projectAuth);
+  const [loading,setLoading] = useState(false);
 
   return (
     <div className="App">
+     
       {user ? (
         <>
-          <Title auth={projectAuth} />
+          <Title setLoading={setLoading} auth={projectAuth} />
           <UploadForm uid={user.uid} />
           <ImageGrid uid={user.uid} setSelectedImg={setSelectedImg} />
           {selectedImg && (
@@ -23,7 +26,11 @@ function App() {
           )}
         </>
       ) : (
-        <SignIn auth={projectAuth} provider={provider} />
+        <>
+        {loading && <LinearProgress/> }
+      
+        <SignIn setLoading={setLoading} auth={projectAuth} provider={provider} />
+        </>
       )}
     </div>
   );
